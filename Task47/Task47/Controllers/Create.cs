@@ -12,7 +12,6 @@ namespace Task47.Controllers
     {
         private readonly string _tempUploadPath = Path.Combine(Directory.GetCurrentDirectory(), "BackendImages");
 
-        // Constructor to ensure the directory exists
         public Create()
         {
             if (!Directory.Exists(_tempUploadPath))
@@ -70,7 +69,7 @@ namespace Task47.Controllers
                     Owner = file.Owner,
                     Created = DateTime.Now,
                     LastModified = DateTime.Now,
-                    FileName = file.Image.FileName // Store file name
+                    FileName = file.Image.FileName
                 };
                 images.Add(imagefile);
 
